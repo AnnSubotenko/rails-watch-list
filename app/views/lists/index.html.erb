@@ -1,0 +1,28 @@
+<nav class="navbar navbar-light bg-light justify-content-between">
+  <%# <a class="navbar-brand">Popcorn Icon</a> %>
+  <i class="fa-solid fa-clapperboard fa-beat fa-2xl" style="color: #396f56;"></i>
+  <form class="form-inline">
+    <%# <input class="form-control mr-sm-2" aria-label="My Lists">
+    <button class="btn btn-outline-success my-2 my-sm-0">New List</button> %>
+    <a class="nav-link" href="#">My Lists</a>
+    <a class="nav-link" href="#">New List</a>
+  </form>
+</nav>
+
+
+
+<div class="container">
+
+  <div class="text-center">
+    <h1>My lists</h1>
+  </div>
+
+  <% @lists.each do |list| %>
+    <li class="list-group-item"><%= link_to list.name, list_path(list)%></li>
+  <% end %>
+
+  <br>
+
+  <button type="button" class="btn btn-info"><%= link_to 'Create a list', new_list_path  %></button>
+
+</div>
