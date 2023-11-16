@@ -11,4 +11,14 @@
 
 <div>
   <h1><%= @list.name %></h1>
+  
 </div>
+
+<%= link_to "Add new movie to list", new_list_bookmark_path(@list) %>
+
+<%#= simple_form_for [ @list, @movie, @bookmark ] do |f| %>
+  <%#= f.input :comment %>
+  <%#= f.association :movie %>
+  <%#= f.association :list %>
+  <%#= f.button :submit %>
+<%# end %>
